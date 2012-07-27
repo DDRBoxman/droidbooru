@@ -101,12 +101,14 @@ public class MainActivity extends SherlockActivity {
         mConnectButton = findViewById(R.id.button_connect);
         mConnectButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                mConnectButton.setEnabled(false);
+                /*mConnectButton.setEnabled(false);
 
                 mDatastore = ORMDatastore.create(new File(mDataDirectory, "droidbooru.db").getAbsolutePath());
                 mDatastore.setDownloadPathPrefix(mDataDirectory.getAbsolutePath());
                 mDatastore.setNetworkHandler(new HttpClientNetwork("http://img.uncod.in/v2/api"));
-                mDatastore.authenticate("test", "test", new AuthCallback());
+                mDatastore.authenticate("test", "test", new AuthCallback());       */
+
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
         });
 
